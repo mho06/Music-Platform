@@ -1,14 +1,22 @@
 const express = require('express');
-const app = express();
 const path = require('path');
 
-app.use(express.static(path.join(__dirname)));
+const app = express();
 
+// Set view engine to EJS
+app.set('view engine', 'ejs');
+
+// Serve static files (CSS, JS, Images)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Render the homepage
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.render('index', { title: 'Mood-Based Music Platform' });
 });
+
+// Start the server
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`http://localhost:${PORT}/`);
 });

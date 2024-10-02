@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mood-Based Music Platform</h1>
+    </header>
+
+    <section class="intro">
+        <p>Select your mood, and we'll recommend songs that fit your vibe!</p>
+    </section>
+
+    <section class="mood-selector">
+        <h2>How are you feeling?</h2>
+        <div class="mood-buttons">
+            <button id="happyBtn" class="mood-button">Happy</button>
+            <button id="sadBtn" class="mood-button">Sad</button>
+            <button id="relaxedBtn" class="mood-button">Relaxed</button>
+            <button id="excitedBtn" class="mood-button">Excited</button>
+        </div>
+    </section>
+
+    <section class="songs">
+        <h2>Recommended Songs</h2>
+        <ul id="songList"></ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mood-Based Music Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
